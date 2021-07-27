@@ -1,8 +1,83 @@
-body {
-	background-color: rgb(216, 175, 129);
-	color: aliceblue;
-}
-.box {
-	background-color: #9d9d9d;
+@import "global";
+@import "vars";
+@import "fonts";
+
+.header__top {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 90px;
+}
+
+.header__text {
+	margin-left: auto;
+	margin-right: 25px;
+	span {
+		color: $red;
+	}
+}
+.header__panel {
+	display: flex;
+	align-items: center;
+}
+.header__cart {
+	position: relative;
+	text-align: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background-color: #f5f5f5;
+	margin-right: 25px;
+	img {
+		margin: 10px 0;
+	}
+	span {
+		font-family: "Open Sans", sans-serif;
+		font-size: 11px;
+		font-weight: 600;
+		position: absolute;
+		padding: 3px 0;
+		height: 19px;
+		width: 19px;
+		background-color: $red;
+		border-radius: 50%;
+		right: -5px;
+		top: -8px;
+		color: #fff;
+	}
+}
+.header__btn {
+	width: 70px;
+	padding: 10px 5px;
+	text-align: center;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 12px;
+	& + .header__btn {
+		margin-left: 7px;
+	}
+}
+
+.login-btn {
+	background-color: $green;
+}
+.register-btn {
+	background-color: $red;
+}
+.header__bottom {
+	display: flex;
+	align-items: center;
+	height: 60px;
+	background-color: $main-dark;
+}
+.header__menu {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	li {
+		display: inline-block;
+	}
+	li + li {
+		margin-left: 38px;
+	}
 }
