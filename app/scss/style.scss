@@ -175,7 +175,8 @@
 	margin-bottom: 45px;
 }
 .products__item {
-	width: 442px;
+	max-width: 442px;
+	width: 100%;
 	background-color: #fff;
 	box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
 	margin-bottom: 30px;
@@ -221,6 +222,7 @@
 	.products__item-author {
 		display: flex;
 		align-items: center;
+		max-width: 245px;
 	}
 	&-avatar {
 		display: inline-block;
@@ -240,6 +242,7 @@
 	&-rating {
 		font-size: 12px;
 		color: $main-dark;
+		display: flex;
 	}
 }
 
@@ -255,6 +258,42 @@
 		&.mixitup-control-active {
 			background-color: $red;
 			color: #fff;
+		}
+	}
+}
+
+// trend
+.trend {
+	padding: 120px 0;
+	&__title {
+		font-size: 36px;
+		font-weight: 700;
+		color: $main-dark;
+		margin-bottom: 60px;
+		text-align: center;
+	}
+	&__wrapper {
+		text-align: center;
+		margin: 0 -10px;
+
+		.slick-dots {
+			text-align: center;
+			li {
+				display: inline-block;
+				button {
+					font-size: 0;
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+					background-color: #e8e8e8;
+					margin: 0 3px;
+				}
+				&.slick-active {
+					button {
+						background-color: $green;
+					}
+				}
+			}
 		}
 	}
 }
