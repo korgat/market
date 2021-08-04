@@ -73,7 +73,7 @@
 .header__menu {
 	color: #fff;
 	font-size: 14px;
-	font-weight: 500;
+	@include f500;
 	li {
 		display: inline-block;
 	}
@@ -96,12 +96,12 @@
 
 .search__title {
 	font-size: 48px;
-	font-weight: 700;
+	@include f700;
 	margin-bottom: 30px;
 }
 .search__text {
 	font-size: 20px;
-	font-weight: 500;
+	@include f500;
 	margin-bottom: 60px;
 }
 .search__wrapper {
@@ -119,7 +119,7 @@
 			padding: 0 70px 0 25px;
 			color: #90a4ae;
 			font-size: 14px;
-			font-weight: 500;
+			@include f500;
 			&::placeholder {
 				color: $red;
 				color: #90a4ae;
@@ -143,7 +143,7 @@
 .products__title {
 	text-align: center;
 	font-size: 36px;
-	font-weight: 700;
+	@include f700;
 	color: $main-dark;
 	margin-bottom: 55px;
 }
@@ -154,7 +154,7 @@
 		margin-bottom: 60px;
 		button {
 			font-size: 14px;
-			font-weight: 500;
+			@include f500;
 			color: $main-dark;
 			background-color: #fff;
 			padding: 10px 20px;
@@ -201,17 +201,17 @@
 		display: block;
 		font-size: 18px;
 		color: $main-dark;
-		font-weight: 500;
+		@include f500;
 		margin-bottom: 7px;
 	}
 	&-category {
 		font-size: 14px;
-		font-weight: 500;
+		@include f500;
 		color: $green;
 	}
 	&-price {
 		font-size: 20px;
-		font-weight: 700;
+		@include f500;
 	}
 	.products__item-bottom {
 		display: flex;
@@ -236,7 +236,7 @@
 	&-name {
 		margin-left: 12px;
 		font-size: 14px;
-		font-weight: 500;
+		@include f500;
 		color: $main-bright;
 	}
 	&-rating {
@@ -267,7 +267,7 @@
 	padding: 120px 0;
 	&__title {
 		font-size: 36px;
-		font-weight: 700;
+		@include f700;
 		color: $main-dark;
 		margin-bottom: 60px;
 		text-align: center;
@@ -295,5 +295,70 @@
 				}
 			}
 		}
+	}
+}
+
+// advantages
+.advantages {
+	background-color: $main-dark;
+	padding: 115px 0;
+	&__title {
+		text-align: center;
+		color: #fff;
+		font-size: 36px;
+		@include f700;
+		margin-bottom: 80px;
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.advantages__item {
+	max-width: 370px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 0 20px;
+	&:hover {
+		.advantages__item-img {
+			background-color: $green;
+			svg {
+				g {
+					fill: #fff;
+				}
+			}
+		}
+		.advantages__item-title {
+			color: $green;
+		}
+	}
+	&-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 112px;
+		height: 112px;
+		border-radius: 50%;
+		background-color: #fff;
+		margin-bottom: 30px;
+		transition: all 0.3s;
+		svg {
+			g {
+				transition: all 0.3s;
+			}
+		}
+	}
+	&-title {
+		font-size: 24px;
+		@include f500;
+		color: #fff;
+		margin-bottom: 20px;
+		transition: all 0.3s;
+	}
+	&-text {
+		color: #b0bec5;
+		line-height: 24px;
 	}
 }

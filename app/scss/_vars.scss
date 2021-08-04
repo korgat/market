@@ -2,3 +2,12 @@ $main-dark: #263238;
 $main-bright: #546e7a;
 $green: #8bc34a;
 $red: #e74c3c;
+
+@mixin f500 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+}
+@mixin f700 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+}
