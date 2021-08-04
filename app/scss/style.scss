@@ -362,3 +362,41 @@
 		line-height: 24px;
 	}
 }
+
+// author
+
+.author {
+	background-image: url(../images/author-bg.jpg);
+	min-height: 745px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__box {
+		max-width: 655px;
+		width: 100%;
+		min-height: 215px;
+		background-color: $green;
+		line-height: 36px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&-title {
+			font-size: 30px;
+			color: #fff;
+			max-width: 275px;
+			margin-right: 40px;
+			span {
+				@include f700;
+			}
+		}
+		&-btn {
+			font-size: 18px;
+			color: $main-dark;
+			background-color: #fff;
+			padding: 13px 40px;
+		}
+	}
+}
