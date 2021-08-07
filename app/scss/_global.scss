@@ -50,3 +50,16 @@ body {
 	display: inline-block;
 	margin-right: 15px;
 }
+
+.angle-right::before {
+	content: "\f105";
+	position: absolute;
+	font-family: "icomoon";
+	color: #8bc34a;
+	left: 0;
+	top: 0;
+}
+
+.block-off {
+	display: none;
+}

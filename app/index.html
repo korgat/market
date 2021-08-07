@@ -32,12 +32,163 @@
 					<a href="tel:61383766284">+61 3 8376 6284</a>
 				</div>
 				<div class="header__panel">
-					<a href="#" class="header__cart">
-						<span>8</span>
-						<img src="./images/header/cart.png" alt="">
-					</a>
-					<a href="#" class="header__btn login-btn">Login</a>
-					<a href="#" class="header__btn register-btn">Register</a>
+					<div class="header__notification-box">
+						<a href="#" class="header__circle icon-bell-o">
+							<span>8</span>
+						</a>
+						<div class="notification__menu">
+							<div class="notification__item icon-bell-o active">
+								<img src="./images/content/message.jpg" alt="" class="notification__img">
+								<div class="notification__info">
+									<div class="notification__info-type">
+										Need WP Help!
+									</div>
+									<div class="notification__info-date">
+										26 Nov, 2016
+									</div>
+								</div>
+							</div>
+							<div class="notification__item icon-bell-o">
+								<img src="./images/content/message.jpg" alt="" class="notification__img">
+								<div class="notification__info">
+									<div class="notification__info-type">
+										Need WP Help!
+									</div>
+									<div class="notification__info-date">
+										26 Nov, 2016
+									</div>
+								</div>
+							</div>
+							<div class="notification__item icon-bell-o">
+								<img src="./images/content/message.jpg" alt="" class="notification__img">
+								<div class="notification__info">
+									<div class="notification__info-type">
+										Need WP Help!
+									</div>
+									<div class="notification__info-date">
+										26 Nov, 2016
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__message-box">
+						<a href="#" class="header__circle icon-envelope-o">
+							<span>8</span>
+						</a>
+						<div class="message__menu">
+							<div class="message__item icon-envelope-o active">
+								<img src="./images/content/message.jpg" alt="" class="message__img">
+								<div class="message__info">
+									<div class="message__info-name">
+										Kazi Fahim
+									</div>
+									<div class="message__info-type">
+										Need WP Help!
+									</div>
+									<div class="message__info-date">
+										26 Nov, 2016
+									</div>
+								</div>
+							</div>
+							<div class="message__item icon-envelope-o">
+								<img src="./images/content/message.jpg" alt="" class="message__img common__img">
+								<div class="message__info">
+									<div class="message__info-name">
+										Kazi Fahim
+									</div>
+									<div class="message__info-type">
+										Need WP Help!
+									</div>
+									<div class="message__info-date">
+										26 Nov, 2016
+									</div>
+								</div>
+							</div>
+							<div class="message__item icon-mail-reply">
+								<img src="./images/content/message.jpg" alt="" class="message__img common__img">
+								<div class="message__info">
+									<div class="message__info-name">
+										Kazi Fahim
+									</div>
+									<div class="message__info-type">
+										Need WP Help!
+									</div>
+									<div class="message__info-date">
+										26 Nov, 2016
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="header__cart-box ">
+						<a href="#" class="header__circle icon-shopping-cart">
+							<span>8</span>
+						</a>
+						<div class="cart__menu">
+							<div class="cart__item">
+								<img src="./images/content/header-cart.jpg" alt="" class="cart__img">
+								<div class="cart__info">
+									<div class="cart__info-title">
+										Grand Ballet
+									</div>
+									<div class="cart__info-type">
+										WordPress
+									</div>
+									<div class="cart__info-price">
+										$59
+									</div>
+								</div>
+							</div>
+							<div class="cart__item">
+								<img src="./images/content/header-cart.jpg" alt="" class=" cart__img">
+								<div class="cart__info">
+									<div class="cart__info-title">
+										Grand Ballet
+									</div>
+									<div class="cart__info-type">
+										WordPress
+									</div>
+									<div class="cart__info-price">
+										$59
+									</div>
+								</div>
+							</div>
+							<div class="cart__bottom">
+								<div class="bottom__info">
+									<div class="bottom__info-total">Total</div>
+									<div class="bottom__info-sum">$118</div>
+								</div>
+								<div class="bottom__btn">
+									<a class="bottom__btn-cart" href="#">Go to Cart</a>
+									<a class="bottom__btn-checkout" href="#">Go to Checkout</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__user-box ">
+						<a class="header__user" href="#">
+							<img src="./images/header/user.jpg" alt="" class="header__user-img">
+							<div class="header__user-info">
+								<div class="header__user-name">Mike Hussy</div>
+								<div class="header__user-money">$171.00</div>
+							</div>
+						</a>
+						<ul class="user__menu">
+							<li><a class="angle-right" href="#">Profile Page</a></li>
+							<li><a class="angle-right" href="#">Portfolio</a></li>
+							<li><a class="angle-right" href="#">Account Setting</a></li>
+							<li><a class="angle-right" href="#">Downloads</a></li>
+							<li><a class="angle-right" href="#">Wishlist</a></li>
+							<li><a class="angle-right" href="#">Upload Item</a></li>
+							<li><a class="angle-right" href="#">Statement</a></li>
+							<li><a class="angle-right" href="#">Withdraws</a></li>
+						</ul>
+					</div>
+					<a href="#" class="header__btn login-btn block-off">Login</a>
+					<a href="#" class="header__btn register-btn block-off">Register</a>
+					<a href="#" class="header__btn logout-btn ">Logout</a>
 				</div>
 			</div>
 		</div>
@@ -105,7 +256,7 @@
 				<div class="search__text">Premium WordPress Themes, Web Templates and Many More ...</div>
 				<form>
 					<input class="search__input" type="text" placeholder="Search Your Keywords . . ." required>
-					<button class="search__btn"><img src="./images/header/icons/search.png" alt=""></button>
+					<button class="search__btn"></button>
 				</form>
 			</div>
 		</div>

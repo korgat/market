@@ -3,10 +3,21 @@
 @import "fonts";
 
 .header__top {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 90px;
+}
+.header__menu-btn {
+	position: absolute;
+	display: none;
+	div {
+		width: 30px;
+		height: 4px;
+		margin-bottom: 4px;
+		background-color: $main-dark;
+	}
 }
 
 .header__text {
@@ -20,16 +31,21 @@
 	display: flex;
 	align-items: center;
 }
-.header__cart {
+.header__panel.header__panel-on {
+	display: flex;
+}
+.header__circle {
 	position: relative;
 	text-align: center;
 	width: 34px;
 	height: 34px;
 	border-radius: 50%;
 	background-color: #f5f5f5;
-	margin-right: 25px;
-	img {
-		margin: 10px 0;
+	&::before {
+		color: #a0a0a0;
+		font-size: 14px;
+		text-align: center;
+		line-height: 34px;
 	}
 	span {
 		font-family: "Open Sans", sans-serif;
@@ -39,11 +55,240 @@
 		padding: 3px 0;
 		height: 19px;
 		width: 19px;
-		background-color: $red;
+		background-color: $green;
 		border-radius: 50%;
 		right: -5px;
 		top: -8px;
 		color: #fff;
+	}
+	&.icon-envelope-o {
+		span {
+			background-color: $orange;
+		}
+	}
+	&.icon-bell-o {
+		span {
+			background-color: $yellow;
+		}
+	}
+}
+
+.header__user {
+	display: flex;
+	align-items: center;
+	padding-right: 22px;
+	margin-right: 30px;
+	position: relative;
+	&-img {
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		margin-right: 15px;
+	}
+	&-info {
+		font-size: 14px;
+	}
+	&-name {
+		color: #222222;
+		@include f500;
+		margin-bottom: 5px;
+		&::after {
+			position: absolute;
+			content: "\f107";
+			font-family: "icomoon";
+			top: 0;
+			right: 0;
+		}
+	}
+	&-money {
+		color: $green;
+		@include f700;
+	}
+}
+.header__user-box,
+.header__cart-box,
+.header__message-box,
+.header__notification-box {
+	position: relative;
+	margin-left: 20px;
+	&:hover {
+		height: 62px;
+		margin-top: 25px;
+		.user__menu,
+		.cart__menu,
+		.message__menu,
+		.notification__menu {
+			height: auto;
+			overflow: visible;
+			padding: 10px 24px 10px;
+			border-width: 1px;
+		}
+	}
+	.user__menu,
+	.cart__menu,
+	.message__menu,
+	.notification__menu {
+		height: 0;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		top: 63px;
+		right: 0;
+		border: 0px solid #d5d5d5;
+		background-color: #fff;
+		padding: 0 24px;
+		transition: all 0.3s;
+		z-index: 4;
+		li {
+			position: relative;
+			padding-left: 14px;
+			padding-right: 14px;
+			font-size: 12px;
+			line-height: 36px;
+			color: $main-bright;
+		}
+	}
+}
+.header__cart-box {
+	&:hover {
+		.cart__menu {
+			width: 265px;
+			padding: 19px 0px 12px;
+		}
+	}
+	.cart__menu {
+		padding: 0;
+		width: 265px;
+		.cart__item {
+			display: flex;
+			align-items: center;
+			padding: 0 22px 19px;
+			border-bottom: 1px solid #d5d5d5;
+			& + .cart__item {
+				padding-top: 19px;
+			}
+		}
+		.cart__img {
+			margin-right: 15px;
+		}
+		.cart__info {
+			line-height: 20px;
+		}
+		.cart__info-title {
+			@include f500;
+			color: $main-dark;
+		}
+		.cart__info-type {
+			font-size: 12px;
+			color: $green;
+		}
+		.cart__info-price {
+			@include f500;
+			color: #000;
+			font-size: 16px;
+		}
+		.cart__bottom {
+			padding: 20px 15px 0px;
+			.bottom__info {
+				display: flex;
+				justify-content: space-between;
+				padding: 0 12px;
+				font-size: 16px;
+				@include f700;
+				color: $main-dark;
+				margin-bottom: 15px;
+			}
+			.bottom__btn {
+				display: flex;
+				justify-content: space-between;
+				font-size: 14px;
+				@include f700;
+				color: #f4f6f5;
+				line-height: 35px;
+				text-align: center;
+				&-cart {
+					background-color: #95c85a;
+					margin-right: 6px;
+					flex-grow: 1;
+				}
+				&-checkout {
+					flex-grow: 1;
+					background-color: #e85647;
+				}
+			}
+		}
+	}
+}
+.header__message-box,
+.header__notification-box {
+	&:hover {
+		.message__menu,
+		.notification__menu {
+			padding: 0;
+			padding-top: 15px;
+		}
+	}
+	.message__menu,
+	.notification__menu {
+		width: 265px;
+		padding: 0;
+	}
+	.message__item,
+	.notification__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #d5d5d5;
+		padding: 0px 20px 22px;
+		&.active::before {
+			color: $orange;
+		}
+		&::before {
+			position: absolute;
+			bottom: 50px;
+			right: 29px;
+		}
+		& + .message__item {
+			padding-top: 15px;
+		}
+	}
+	.message__img,
+	.notification__img {
+		border-radius: 50%;
+		margin-right: 20px;
+	}
+	.message__info,
+	.notification__info {
+		line-height: 16px;
+		&-name {
+			font-size: 12px;
+			@include f700;
+			color: $main-dark;
+		}
+		&-type {
+			font-size: 11px;
+			color: $green;
+		}
+		&-date {
+			font-size: 10px;
+			color: #707070;
+		}
+	}
+}
+
+.header__notification-box {
+	.notification__item {
+		&::before {
+			bottom: 40px;
+		}
+		& + .notification__item {
+			padding-top: 15px;
+		}
+	}
+	.notification__info {
+		&-type {
+			font-size: 12px;
+		}
 	}
 }
 .header__btn {
@@ -61,16 +306,31 @@
 .login-btn {
 	background-color: $green;
 }
-.register-btn {
+.register-btn,
+.logout-btn {
 	background-color: $red;
 }
-.header__bottom {
-	display: flex;
+.header__user-menu {
+	display: none;
+	position: absolute;
+	font-family: "icomoon";
+	justify-content: center;
 	align-items: center;
-	height: 60px;
+	font-size: 25px;
+	border-radius: 50%;
+	right: 0px;
+	height: 40px;
+	width: 40px;
+	color: #fff;
+	background-color: $main-dark;
+}
+.header__bottom {
 	background-color: $main-dark;
 }
 .header__menu {
+	height: 60px;
+	display: flex;
+	align-items: center;
 	color: #fff;
 	font-size: 14px;
 	@include f500;
@@ -129,8 +389,17 @@
 			position: absolute;
 			border: none;
 			background-color: transparent;
-			top: 16px;
-			right: 20px;
+			top: 15px;
+			right: 25px;
+			&::before {
+				position: absolute;
+				content: "\f002";
+				font-family: "icomoon";
+				font-size: 22px;
+				top: 0;
+				left: 0;
+				color: #78909c;
+			}
 		}
 	}
 }
@@ -616,3 +885,5 @@
 		padding: 25px 0px 30px;
 	}
 }
+
+@import "media";

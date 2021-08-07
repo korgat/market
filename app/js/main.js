@@ -2,7 +2,7 @@
 
 $(function () {
 
-	var mixer = mixitup('.products__box')
+
 	$(".rate-star").rateYo({
 		rating: 5,
 		starWidth: "12px",
@@ -16,4 +16,14 @@ $(function () {
 		dots: true,
 		arrows: false,
 	});
+
+	$(".header__menu-btn").on("click", function () {
+		$(".header__menu").slideToggle()
+	})
+
+	$(".header__user-menu").on("click", function () {
+		$(".header__panel").toggleClass("header__panel-on")
+	})
+
+	var mixer = mixitup('.products__box')
 })
