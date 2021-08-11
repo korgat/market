@@ -9,6 +9,7 @@
   "author": "Taras Gasyuk",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "@rateyo/jquery": "^3.0.0-alpha.2",
     "browser-sync": "^2.27.4",
     "gulp": "^4.0.2",
