@@ -21,6 +21,9 @@ h5,
 h6 {
 	margin: 0;
 }
+p {
+	margin: 0;
+}
 button {
 	border: none;
 	background-color: transparent;
@@ -35,6 +38,7 @@ li {
 body {
 	font-family: "Roboto-Regular", sans-serif;
 	font-size: 15px;
+	background-color: #f4f6f5;
 }
 .container {
 	max-width: 1200px;
@@ -57,7 +61,6 @@ body {
 	font-family: "icomoon";
 	color: #8bc34a;
 	left: 0;
-	top: 0;
 }
 
 .block-off {
