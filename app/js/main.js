@@ -33,6 +33,7 @@ $(function () {
 		$('#' + id).addClass('active-tab').fadeIn();
 		return false;
 	});
+	$('input, select').styler();
 
 	var mixer = mixitup('.products__box')
 })
