@@ -35,5 +35,23 @@ $(function () {
 	});
 	$('input, select').styler();
 
+	noUiSlider.create(slider, {
+		start: [0, 600],
+		tooltips: true,
+		connect: true,
+		format: {
+			from: function (value) {
+				return parseInt(value);
+			},
+			to: function (value) {
+				return parseInt(value) + "$";
+			}
+		},
+		range: {
+			'min': 0,
+			'max': 1000
+		}
+	});
+
 	var mixer = mixitup('.products__box')
 })
