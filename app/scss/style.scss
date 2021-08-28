@@ -9,6 +9,7 @@
 	align-items: center;
 	height: 90px;
 }
+
 .header__menu-btn {
 	position: absolute;
 	display: none;
@@ -30,6 +31,7 @@
 .header__panel {
 	display: flex;
 	align-items: center;
+	background-color: #f4f6f5;
 }
 .header__panel.header__panel-on {
 	display: flex;
@@ -1653,60 +1655,62 @@
 }
 .settings {
 	margin-bottom: 150px;
-	.settings__inner {
-		.tabs {
-			width: 270px;
-			height: 100%;
-		}
-		.tabs__content {
-			flex-grow: 1;
-			.tab-item {
-				.settings-item__title {
-					font-size: 24px;
-					color: $main-dark;
-					@include f500;
-					border-bottom: 1px solid #dedede;
-					padding: 20px 32px;
-				}
-				form {
-					padding: 30px 35px 80px;
-					.settings-item__row {
-						display: flex;
-						align-items: center;
-						margin-bottom: 20px;
-						color: #444444;
-						label {
-							width: 255px;
-						}
-						input {
-							flex-grow: 1;
-							background-color: #f9f9f9;
-							border: 1px solid #dcdcdc;
-							outline: none;
-							height: 40px;
-							padding: 0 15px;
-						}
-						select {
-							flex-grow: 1;
-							background-color: #f9f9f9;
-							border: 1px solid #dcdcdc;
-							outline: none;
-							height: 40px;
-							padding: 0 15px;
-						}
-						button {
-							background-color: $green;
-							margin-top: 5px;
-							padding: 15px 30px;
-							color: #fff;
-							@include f500;
-						}
-					}
-				}
-			}
-		}
+}
+
+.tabs {
+	max-width: 270px;
+	width: 100%;
+	height: 100%;
+}
+.tabs__content {
+	width: 100%;
+}
+.tab-item {
+	form {
+		padding: 30px 35px 80px;
 	}
 }
+.settings-item__title {
+	font-size: 24px;
+	color: $main-dark;
+	@include f500;
+	border-bottom: 1px solid #dedede;
+	padding: 20px 32px;
+}
+.settings-item__row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	color: #444444;
+	label {
+		max-width: 255px;
+		width: 100%;
+	}
+	input {
+		width: 100%;
+		background-color: #f9f9f9;
+		border: 1px solid #dcdcdc;
+		outline: none;
+		height: 40px;
+		padding: 0 15px;
+	}
+	select {
+		flex-grow: 1;
+		background-color: #f9f9f9;
+		border: 1px solid #dcdcdc;
+		outline: none;
+		height: 40px;
+		padding: 0 15px;
+	}
+	button {
+		background-color: $green;
+		margin-top: 5px;
+		padding: 15px 30px;
+		color: #fff;
+		@include f500;
+	}
+}
+
 // profile
 
 .profile {
@@ -2056,76 +2060,78 @@
 
 .withdrawals {
 	margin-bottom: 145px;
-	.withdrawals__wrapper {
-		display: flex;
-		justify-content: space-between;
-		.withdrawals__column {
-			max-width: 570px;
-			width: 100%;
-			height: 100%;
-			background-color: #fff;
-			border: 1px solid #dedede;
-			.withdrawals__column-title {
-				padding: 20px 35px 24px;
-				font-size: 24px;
-				@include f500;
-				color: $main-dark;
-				border-bottom: 1px solid #dedede;
-			}
-			button {
-				margin-top: 10px;
-				margin-left: 35px;
-				margin-bottom: 50px;
-			}
-		}
+}
+.withdrawals__wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+.withdrawals__column {
+	max-width: 570px;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border: 1px solid #dedede;
+	button {
+		margin-top: 10px;
+		margin-left: 35px;
+		margin-bottom: 50px;
 	}
-	.withdrawals__form-items {
-		padding: 27px 35px 0 35px;
-		.withdrawals__form-item {
-			margin-bottom: 30px;
-			label {
-				display: block;
-				margin-bottom: 22px;
-				font-size: 16px;
-				@include f500;
-				color: $main-dark;
-			}
-			span {
-				color: $green;
-				margin-left: 5px;
-			}
-		}
+}
+.withdrawals__column-title {
+	padding: 20px 35px 24px;
+	font-size: 24px;
+	@include f500;
+	color: $main-dark;
+	border-bottom: 1px solid #dedede;
+}
+
+.withdrawals__form-items {
+	padding: 27px 35px 0 35px;
+}
+.withdrawals__form-item {
+	margin-bottom: 30px;
+	label {
+		display: block;
+		margin-bottom: 22px;
+		font-size: 16px;
+		@include f500;
+		color: $main-dark;
 	}
-	.withdrawals__history-items {
-		padding: 27px 35px 35px 35px;
-		.withdrawals__history-item {
-			display: flex;
-			color: #444444;
-			font-size: 13px;
-			padding: 15px 20px;
-			&:nth-child(odd) {
-				background-color: #f9f9f9;
-			}
-			.withdrawals__item-date {
-				padding-left: 20px;
-				width: 160px;
-				@include f500;
-			}
-			.withdrawals__item-email {
-				width: 180px;
-			}
-			.withdrawals__item-price {
-				width: 70px;
-				@include f700;
-			}
-			.withdrawals__item-status {
-				width: 85px;
-				@include f700;
-				&.paid {
-					color: $green;
-				}
-			}
-		}
+	span {
+		color: $green;
+		margin-left: 5px;
+	}
+}
+
+.withdrawals__history-items {
+	padding: 27px 35px 35px 35px;
+}
+.withdrawals__history-item {
+	display: flex;
+	color: #444444;
+	font-size: 13px;
+	padding: 15px 20px;
+	&:nth-child(odd) {
+		background-color: #f9f9f9;
+	}
+}
+.withdrawals__item-date {
+	padding-left: 20px;
+	width: 160px;
+	@include f500;
+}
+.withdrawals__item-email {
+	width: 180px;
+}
+.withdrawals__item-price {
+	width: 70px;
+	@include f700;
+}
+.withdrawals__item-status {
+	width: 85px;
+	@include f700;
+	&.paid {
+		color: $green;
 	}
 }
 

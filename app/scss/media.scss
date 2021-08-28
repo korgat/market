@@ -3,6 +3,21 @@
 @import "fonts";
 
 @media (max-width: 1050px) {
+	.withdrawals__wrapper {
+		flex-direction: column;
+	}
+	.withdrawals__column {
+		max-width: 100%;
+		& + .withdrawals__column {
+			margin-top: 30px;
+		}
+	}
+
+	.withdrawals__history-item {
+		justify-content: center;
+		min-width: 537px;
+	}
+
 	.header__text {
 		display: none;
 	}
@@ -12,6 +27,16 @@
 	.footer__col-about {
 		width: 100%;
 		margin-bottom: 30px;
+	}
+}
+@media (max-width: 940px) {
+	.settings-item__row {
+		flex-direction: column;
+		align-items: start;
+		margin-bottom: 15px;
+		label {
+			margin-bottom: 10px;
+		}
 	}
 }
 @media (max-width: 860px) {
@@ -94,15 +119,56 @@
 }
 @media (max-width: 700px) {
 	.page-404,
-	.about {
+	.about,
+	.withdrawals,
+	.upload,
+	.settings {
 		margin-bottom: 50px;
 	}
 	.header__message-box,
 	.header__notification-box {
 		display: none;
 	}
+	.settings__inner {
+		flex-direction: column;
+		.tabs {
+			max-width: 100%;
+		}
+	}
+	.tabs {
+		margin-bottom: 20px;
+	}
+	.tab {
+		text-align: center;
+	}
+	.tab-item form {
+		padding-bottom: 20px;
+	}
+}
+@media (max-width: 640px) {
+	.upload__content-line {
+		flex-direction: column;
+		margin-bottom: 20px;
+		label {
+			padding-top: 0;
+			margin-bottom: 15px;
+		}
+	}
+	.upload__content button {
+		margin-left: 0;
+	}
+	.withdrawals__history-items {
+		overflow-x: scroll;
+		padding: 0;
+	}
 }
 @media (max-width: 570px) {
+	.withdrawals__form-item {
+		margin-bottom: 20px;
+		label {
+			margin-bottom: 15px;
+		}
+	}
 	.header__user-info {
 		display: none;
 	}
@@ -112,11 +178,21 @@
 	}
 }
 @media (max-width: 540px) {
-	.about__top {
+	.about__top,
+	.withdrawals__column-title,
+	.upload__title,
+	.settings-item__title {
 		padding-left: 20px;
 	}
-	.about__body {
+	.about__body,
+	.withdrawals__form-items,
+	.upload__content,
+	.tab-item form {
 		padding: 20px 20px;
+	}
+	.withdrawals__column button {
+		margin-top: 0;
+		margin-left: 20px;
 	}
 	.page-404__body {
 		padding: 70px 10px 50px;
@@ -134,12 +210,22 @@
 	}
 }
 @media (max-width: 440px) {
-	.about__top {
+	.about__top,
+	.withdrawals__column-title,
+	.upload__title,
+	.settings-item__title {
 		font-size: 18px;
 		padding-left: 10px;
+		@include f700;
 	}
-	.about__body {
+	.about__body,
+	.withdrawals__form-items,
+	.upload__content,
+	.tab-item form {
 		padding: 20px 10px;
+	}
+	.withdrawals__column button {
+		margin-left: 10px;
 	}
 	.about__title {
 		margin-bottom: 10px;
@@ -152,7 +238,6 @@
 		top: -70%;
 		left: 34px;
 		height: 0px;
-		background-color: #fff;
 		transition: all 0.5s;
 	}
 	.header__panel-on {
@@ -160,7 +245,6 @@
 		top: 0px;
 		left: 34px;
 		height: 60px;
-		background-color: #fff;
 	}
 
 	.header__cart-box {
@@ -176,6 +260,9 @@
 		font-size: 140px;
 		line-height: 140px;
 		display: block;
+	}
+	.upload__content button {
+		width: 100%;
 	}
 }
 
