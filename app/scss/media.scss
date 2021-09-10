@@ -75,6 +75,39 @@
 	}
 }
 @media (max-width: 800px) {
+	.profile__wrapper {
+		flex-direction: column;
+	}
+	.profile__content {
+		order: -1;
+		margin-bottom: 20px;
+	}
+	.profile__aside {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 0;
+		display: flex;
+	}
+	.profile {
+		.footer__col-socials {
+			width: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			margin-left: 20px;
+			margin-right: 35px;
+			li + li {
+				margin-left: 0;
+			}
+		}
+	}
+	.profile__aside-btn {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		margin-bottom: 50px;
+	}
 	.header__top {
 		height: 60px;
 	}
@@ -94,9 +127,6 @@
 	}
 	.footer__wrapper {
 		justify-content: space-around;
-	}
-	.footer__col-socials {
-		width: 100%;
 	}
 	.footer__col-menu {
 		margin-bottom: 30px;
@@ -122,7 +152,8 @@
 	.about,
 	.withdrawals,
 	.upload,
-	.settings {
+	.settings,
+	.profile {
 		margin-bottom: 50px;
 	}
 	.header__message-box,
@@ -163,6 +194,14 @@
 	}
 }
 @media (max-width: 570px) {
+	.profile__aside {
+		flex-direction: column;
+	}
+	.profile {
+		.footer__col-socials {
+			flex-direction: row;
+		}
+	}
 	.withdrawals__form-item {
 		margin-bottom: 20px;
 		label {
@@ -184,6 +223,7 @@
 	.settings-item__title {
 		padding-left: 20px;
 	}
+	.tabs__content,
 	.about__body,
 	.withdrawals__form-items,
 	.upload__content,
@@ -202,6 +242,9 @@
 	}
 }
 @media (max-width: 520px) {
+	.profile__banner-img {
+		height: 250px;
+	}
 	.footer__wrapper {
 		padding: 40px 0;
 	}
@@ -263,6 +306,9 @@
 	}
 	.upload__content button {
 		width: 100%;
+	}
+	.profile__items-title {
+		margin-bottom: 5px;
 	}
 }
 
