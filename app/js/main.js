@@ -1,6 +1,7 @@
 
 
 $(function () {
+
 	$('.list__inner .tab, .common__tabs .tab').on('click', function (event) {
 		var id = $(this).attr('data-id');
 		$('.list__inner, .common__tabs').find('.tab-item').removeClass('active-tab').hide();
@@ -17,7 +18,7 @@ $(function () {
 		$(".header__panel").toggleClass("header__panel-on")
 	})
 	$('input, select').styler();
-	var mixer = mixitup('.products__box')
+
 	$(".rate-star").rateYo({
 		rating: 5,
 		starWidth: "12px",
@@ -31,7 +32,6 @@ $(function () {
 		dots: true,
 		arrows: false,
 	});
-
 
 
 
@@ -52,6 +52,6 @@ $(function () {
 			'max': 1000
 		}
 	});
-
+	var mixer = mixitup('.products__box')
 
 })
