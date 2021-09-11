@@ -1494,130 +1494,133 @@
 // contact
 .contact {
 	margin-bottom: 135px;
-	.contact__wrapper {
-		.contact__top {
-			color: #444444;
-			background-color: #fff;
-			border: 1px solid #dcdcdc;
-			font-size: 24px;
-			@include f500;
-			padding: 22px 40px;
+}
+
+.contact__top {
+	color: #444444;
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	font-size: 24px;
+	@include f500;
+	padding: 22px 40px;
+}
+.contact__body {
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	border-top: none;
+	padding: 30px 40px;
+}
+.contact__map {
+	margin-bottom: 60px;
+	iframe {
+		width: 100%;
+		height: 415px;
+	}
+}
+.contact__box {
+	display: flex;
+	justify-content: space-between;
+}
+.contact__info {
+	max-width: 280px;
+	width: 100%;
+	&-item {
+		margin-bottom: 35px;
+	}
+	&-title {
+		font-size: 20px;
+		color: $main-dark;
+		@include f500;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		position: relative;
+		padding-left: 40px;
+		&::after {
+			content: "";
+			position: absolute;
+			height: 2px;
+			width: 44px;
+			background-color: $green;
+			bottom: 0;
+			left: 40px;
 		}
-		.contact__body {
-			background-color: #fff;
-			border: 1px solid #dcdcdc;
-			border-top: none;
-			padding: 30px 40px;
+		&::before {
+			position: absolute;
+			left: 0;
+			color: $green;
 		}
-		.contact__map {
-			margin-bottom: 60px;
-			iframe {
-				width: 100%;
-				height: 415px;
+		&.address::before {
+			font-family: "icomoon";
+			content: "\f041";
+		}
+		&.phone::before {
+			font-family: "icomoon";
+			content: "\f095";
+		}
+		&.email::before {
+			font-family: "icomoon";
+			content: "\f003";
+		}
+	}
+	&-text {
+		color: #707070;
+		font-size: 15px;
+		padding-left: 40px;
+	}
+}
+.contact__form {
+	width: 100%;
+	margin-left: 70px;
+	&-title {
+		@include f500;
+		font-size: 24px;
+		color: #333333;
+		margin-bottom: 20px;
+	}
+	&-row {
+		display: flex;
+		justify-content: space-between;
+		input {
+			border: none;
+			outline: none;
+			background-color: #f1f4f5;
+			display: block;
+			max-width: 350px;
+			width: 100%;
+			height: 43px;
+			padding: 15px 15px;
+			margin-bottom: 25px;
+			&::placeholder {
+				color: #7a7a7a;
+			}
+			& + input {
+				margin-left: 25px;
 			}
 		}
-		.contact__box {
-			display: flex;
-			justify-content: space-between;
-			.contact__info {
-				max-width: 280px;
-				&-item {
-					margin-bottom: 35px;
-				}
-				&-title {
-					font-size: 20px;
-					color: $main-dark;
-					@include f500;
-					margin-bottom: 20px;
-					padding-bottom: 20px;
-					position: relative;
-					padding-left: 40px;
-					&::after {
-						content: "";
-						position: absolute;
-						height: 2px;
-						width: 44px;
-						background-color: $green;
-						bottom: 0;
-						left: 40px;
-					}
-					&::before {
-						position: absolute;
-						left: 0;
-						color: $green;
-					}
-					&.address::before {
-						font-family: "icomoon";
-						content: "\f041";
-					}
-					&.phone::before {
-						font-family: "icomoon";
-						content: "\f095";
-					}
-					&.email::before {
-						font-family: "icomoon";
-						content: "\f003";
-					}
-				}
-				&-text {
-					color: #707070;
-					font-size: 15px;
-					padding-left: 40px;
-				}
-			}
-			.contact__form {
-				&-title {
-					@include f500;
-					font-size: 24px;
-					color: #333333;
-					margin-bottom: 20px;
-				}
-				&-row {
-					display: flex;
-					justify-content: space-between;
-					input {
-						border: none;
-						outline: none;
-						background-color: #f1f4f5;
-						display: block;
-						width: 350px;
-						height: 43px;
-						padding: 15px 15px;
-						margin-bottom: 25px;
-						&::placeholder {
-							color: #7a7a7a;
-						}
-						& + input {
-							margin-left: 25px;
-						}
-					}
-				}
-				textarea {
-					border: none;
-					outline: none;
-					background-color: #f1f4f5;
-					display: block;
-					width: 350px;
-					height: 43px;
-					padding: 15px 15px;
-					width: 100%;
-					height: 190px;
-					resize: none;
-					margin-bottom: 23px;
-					&::placeholder {
-						color: #7a7a7a;
-					}
-				}
-				button {
-					font-size: 16px;
-					color: #fff;
-					background-color: $green;
-					@include f700;
-					padding: 20px 5px;
-					width: 190px;
-				}
-			}
+	}
+	textarea {
+		border: none;
+		outline: none;
+		background-color: #f1f4f5;
+		display: block;
+		width: 350px;
+		height: 43px;
+		padding: 15px 15px;
+		width: 100%;
+		height: 190px;
+		resize: none;
+		margin-bottom: 23px;
+		&::placeholder {
+			color: #7a7a7a;
 		}
+	}
+	button {
+		font-size: 16px;
+		color: #fff;
+		background-color: $green;
+		@include f700;
+		padding: 20px 5px;
+		width: 190px;
 	}
 }
 
