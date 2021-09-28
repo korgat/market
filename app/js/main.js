@@ -2,6 +2,7 @@
 
 $(function () {
 
+
 	$('.list__inner .tab, .common__tabs .tab').on('click', function (event) {
 		var id = $(this).attr('data-id');
 		$('.list__inner, .common__tabs').find('.tab-item').removeClass('active-tab').hide();
@@ -31,6 +32,29 @@ $(function () {
 		slidesToScroll: 4,
 		dots: true,
 		arrows: false,
+		responsive: [
+			{
+				breakpoint: 1850,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				}
+			},
+			{
+				breakpoint: 1050,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				}
+			},
+			{
+				breakpoint: 720,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			}
+		]
 	});
 
 
@@ -52,6 +76,6 @@ $(function () {
 			'max': 1000
 		}
 	});
-	var mixer = mixitup('.products__box')
 
+	var mixer = mixitup('.products__box')
 })
